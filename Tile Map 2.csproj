@@ -58,6 +58,9 @@
     <Compile Include="field\Field.cs" />
     <Compile Include="field\FieldGreen.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="service\WebsocketService.cs" />
+    <Compile Include="websocket\WsClient.cs" />
+    <Compile Include="websocket\CommunicationUtils.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>
