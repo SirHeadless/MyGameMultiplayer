@@ -7,8 +7,6 @@ public class Board : Node2D
     // private int a = 2;
     // private string b = "text";
 
-    private Boolean processingInput = false;
-
     [Export]
     public PackedScene FieldGreen;
     [Export]
@@ -49,38 +47,22 @@ public class Board : Node2D
         await client.Connect();
     }
 
-    // public override void _Input(InputEvent @event) {
-        
-    // }
-
-    private ClickedInput getInput()
-    {
-        if (processingInput) return new ClickedInput();
-        if (Input.IsActionPressed("left_click"))
+    public override void _Input(InputEvent @event) {
+        // if (@event.IsActionReleased("left_click"))
+        if (@event is InputEventMouseButton eventMouseButton && eventMouseButton.IsActionReleased("left_click"))
         {
-            processingInput = false;
-            return new ClickedInput(GetGlobalMousePosition());
+            
+            GD.Print("Mouse Click/Unclick at: ", eventMouseButton.Position);
+
+            Vector2 coordinates = GetNode<TileMap>("Fields").WorldToMap(eventMouseButton.Position);
+
+            client.Send(coordinates.x + "," + coordinates.y);
         }
-        return new ClickedInput();
     }
 
     // Called every frame. 'delta' is the elapsed time since the previous frame.
     public override void _Process(float delta)
     {
-        ClickedInput clickedInput = getInput();
-        if (clickedInput.gotInput())
-        {
-            GD.Print(clickedInput.ClickedPosition);
-            Vector2 coordinates = GetNode<TileMap>("Fields").WorldToMap(clickedInput.ClickedPosition);
-
-            client.Send(coordinates.x + "," + coordinates.y);
-
-            // displayOnField(coordinates);
-
-
-
-
-        }
 
         var cqueue = client.receiveQueue;
         string msg;
@@ -114,7 +96,6 @@ public class Board : Node2D
         FieldGreen fieldGreen = (FieldGreen)FieldGreen.Instance();
         fieldGreen.Init(pos);
         AddChild(fieldGreen);
-        processingInput = false;
         GD.Print(coordinates);
         GD.Print(pos);
         GD.Print("===================");
