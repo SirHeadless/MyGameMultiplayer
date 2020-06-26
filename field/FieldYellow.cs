@@ -1,7 +1,7 @@
 using Godot;
 using System;
 
-public class FieldGreen : Area2D
+public class FieldYellow : Area2D
 {
 	// Declare member variables here. Examples:
 	// private int a = 2;
@@ -13,12 +13,12 @@ public class FieldGreen : Area2D
 		
 	}
 	
-	public FieldGreen Init(Vector2 pos) {
+	public FieldYellow Init(Vector2 pos) {
 		Position = pos;
 		return this;
 	}
 
-	public FieldGreen(){
+	public FieldYellow(){
 		
 	}
 
