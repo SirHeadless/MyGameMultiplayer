@@ -27,6 +27,7 @@ __meta__ = {
 }
 
 [node name="Figures" type="TileMap" parent="."]
+z_index = 1
 tile_set = ExtResource( 3 )
 cell_half_offset = 0
 format = 1
@@ -35,6 +36,10 @@ __meta__ = {
 }
 
 [node name="Valence" type="TileMap" parent="."]
+z_index = 4
 tile_set = ExtResource( 6 )
 cell_half_offset = 0
 format = 1
+__meta__ = {
+"_edit_lock_": true
+}
