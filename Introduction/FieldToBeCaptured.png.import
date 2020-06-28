@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/figure_green.png-9ed43f28828cfd13f267ed1a6f3452c7.stex"
+path="res://.import/FieldToBeCaptured.png-2cd762d08faff7fd9a6b0eccf3b44be4.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/figure_green.png"
-dest_files=[ "res://.import/figure_green.png-9ed43f28828cfd13f267ed1a6f3452c7.stex" ]
+source_file="res://Introduction/FieldToBeCaptured.png"
+dest_files=[ "res://.import/FieldToBeCaptured.png-2cd762d08faff7fd9a6b0eccf3b44be4.stex" ]
 
 [params]
 

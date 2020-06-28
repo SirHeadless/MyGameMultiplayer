@@ -128,13 +128,13 @@ public class Board : Node2D
 
 	private List<List<int>> valenceMessageToValences(String[] valenceMessage) {
 		GD.Print(valenceMessage);
+		int index = 1;
 		List<List<int>> valences = new List<List<int>>(); 
 		for (int i = 0; i < MAXCOLUMNS ; i++) {
 			int offset = i % 2;
 			valences.Add(new List<int>());
 			for (int j = 0; j < ROWS - offset; j++) {
-				GD.Print(i + j + 1);
-				valences[i].Add(valenceMessage[i + j + 1].ToInt());
+				valences[i].Add(valenceMessage[index++].ToInt());
 			}
 		}
 		return valences;

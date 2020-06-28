@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/figure_green_trans.png-da936f5e8785edaaf71f7a9a6e8402e8.stex"
+path="res://.import/Four.png-f0b6aec662c2ad9d7010cba2a5b96d6c.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/figure_green_trans.png"
-dest_files=[ "res://.import/figure_green_trans.png-da936f5e8785edaaf71f7a9a6e8402e8.stex" ]
+source_file="res://notUsedAnymore/bigValences/Four.png"
+dest_files=[ "res://.import/Four.png-f0b6aec662c2ad9d7010cba2a5b96d6c.stex" ]
 
 [params]
 

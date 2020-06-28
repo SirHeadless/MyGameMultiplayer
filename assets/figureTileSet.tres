@@ -1,13 +1,11 @@
-[gd_resource type="TileSet" load_steps=5 format=2]
+[gd_resource type="TileSet" load_steps=3 format=2]
 
-[ext_resource path="res://assets/figure_yellow.png" type="Texture" id=1]
-[ext_resource path="res://assets/figure_green.png" type="Texture" id=2]
-[ext_resource path="res://assets/captured_green.png" type="Texture" id=3]
-[ext_resource path="res://assets/captured_yellow.png" type="Texture" id=4]
+[ext_resource path="res://assets/Captured_green.png" type="Texture" id=3]
+[ext_resource path="res://assets/Captured_blue.png" type="Texture" id=4]
 
 [resource]
-0/name = "figure_green"
-0/texture = ExtResource( 2 )
+0/name = "captured_green"
+0/texture = ExtResource( 3 )
 0/tex_offset = Vector2( 0, 0 )
 0/modulate = Color( 1, 1, 1, 1 )
 0/region = Rect2( 0, 0, 64, 64 )
@@ -20,8 +18,8 @@
 0/shape_one_way_margin = 0.0
 0/shapes = [  ]
 0/z_index = 0
-1/name = "figure_yellow"
-1/texture = ExtResource( 1 )
+1/name = "captured_yellow"
+1/texture = ExtResource( 4 )
 1/tex_offset = Vector2( 0, 0 )
 1/modulate = Color( 1, 1, 1, 1 )
 1/region = Rect2( 0, 0, 64, 64 )
