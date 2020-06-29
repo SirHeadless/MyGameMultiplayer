@@ -23,6 +23,8 @@ public class Board : Node2D
 
 	private WsClient client;
 
+	private List<List<int>> valenceMatrix;
+
 	public override void _Ready()
 	{
 		server = "ws://127.0.0.1:8080/ws-chat/123?name=Hostname" + System.Guid.NewGuid();
@@ -92,7 +94,7 @@ public class Board : Node2D
 			} 
 			else if (result[0] == "valences") {
 				try {
-					List<List<int>> valenceMatrix = valenceMessageToValences(result);
+					valenceMatrix = valenceMessageToValences(result);
 					displayValencesOnField(valenceMatrix);
 				} catch (Exception ex) {
 					GD.Print(msg);
@@ -168,12 +170,20 @@ public class Board : Node2D
 	public void displayCapturedFieldsOnField(String[] caputredFieldPositions, Player player)
 	{
 		GD.Print("ccccccccccccccc CAPTURED FIELDS ccccccccccccccccccccccc");
-		String tileName = (player == Player.PlayerGreen) ? "captured_green" : "captured_yellow";
+		String tileName = (player == Player.PlayerGreen) ? "captured_gray" : "captured_gray";
+		int multiplicator = (player == Player.PlayerGreen) ? 1 : 2;
 		TileMap figuresTileMap = GetNode<TileMap>("Figures");
+		TileMap valenceTileMap = GetNode<TileMap>("Valence");
 		GD.Print(caputredFieldPositions);
-		for (int i = 2; i <= caputredFieldPositions.Length; i=i+2) {
+		for (int i = 2; i < caputredFieldPositions.Length; i=i+2) {
 			GD.Print(i);
-			figuresTileMap.SetCellv(new Vector2(caputredFieldPositions[i].ToInt(), caputredFieldPositions[i+1].ToInt()), figuresTileMap.TileSet.FindTileByName(tileName));
+			int x = caputredFieldPositions[i].ToInt();
+			int y = caputredFieldPositions[i+1].ToInt();
+			
+			int valenceTileIndex = this.valenceMatrix[y][x];
+			GD.Print(x,y,valenceTileIndex,tileName);
+			figuresTileMap.SetCellv(new Vector2(x, y), figuresTileMap.TileSet.FindTileByName(tileName));
+			valenceTileMap.SetCellv(new Vector2(x, y), 6*multiplicator + valenceTileIndex-1);
 		}
 		GD.Print("cccccccccccccccccccccccccccccccccccccccccccccccccccccc");
 

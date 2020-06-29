@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://assets/Three.png" type="Texture" id=1]
 [ext_resource path="res://assets/Four.png" type="Texture" id=2]
@@ -6,29 +6,144 @@
 [ext_resource path="res://assets/One.png" type="Texture" id=4]
 [ext_resource path="res://assets/Five.png" type="Texture" id=5]
 [ext_resource path="res://assets/Two.png" type="Texture" id=6]
+[ext_resource path="res://assets/Three_green.png" type="Texture" id=7]
+[ext_resource path="res://assets/Six_green.png" type="Texture" id=8]
+[ext_resource path="res://assets/Five_green.png" type="Texture" id=9]
+[ext_resource path="res://assets/Four_blue.png" type="Texture" id=10]
+[ext_resource path="res://assets/Four_green.png" type="Texture" id=11]
+[ext_resource path="res://assets/Two_green.png" type="Texture" id=12]
+[ext_resource path="res://assets/Five_blue.png" type="Texture" id=13]
+[ext_resource path="res://assets/Two_blue.png" type="Texture" id=14]
+[ext_resource path="res://assets/Three_blue.png" type="Texture" id=15]
+[ext_resource path="res://assets/One_blue.png" type="Texture" id=16]
+[ext_resource path="res://assets/Six_blue.png" type="Texture" id=17]
+[ext_resource path="res://assets/One_green.png" type="Texture" id=18]
 
 [node name="Valence" type="Node2D"]
 
 [node name="One" type="Sprite" parent="."]
 texture = ExtResource( 4 )
 centered = false
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="Two" type="Sprite" parent="."]
 texture = ExtResource( 6 )
 centered = false
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="Three" type="Sprite" parent="."]
 texture = ExtResource( 1 )
 centered = false
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="Four" type="Sprite" parent="."]
 texture = ExtResource( 2 )
 centered = false
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="Five" type="Sprite" parent="."]
 texture = ExtResource( 5 )
 centered = false
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="Six" type="Sprite" parent="."]
 texture = ExtResource( 3 )
 centered = false
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="One2" type="Sprite" parent="."]
+texture = ExtResource( 18 )
+centered = false
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Two2" type="Sprite" parent="."]
+texture = ExtResource( 12 )
+centered = false
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Three2" type="Sprite" parent="."]
+texture = ExtResource( 7 )
+centered = false
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Four2" type="Sprite" parent="."]
+texture = ExtResource( 11 )
+centered = false
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Five2" type="Sprite" parent="."]
+texture = ExtResource( 9 )
+centered = false
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Six2" type="Sprite" parent="."]
+texture = ExtResource( 8 )
+centered = false
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="One3" type="Sprite" parent="."]
+texture = ExtResource( 16 )
+centered = false
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Two3" type="Sprite" parent="."]
+texture = ExtResource( 14 )
+centered = false
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Three3" type="Sprite" parent="."]
+position = Vector2( 0, 1 )
+texture = ExtResource( 15 )
+centered = false
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Four3" type="Sprite" parent="."]
+texture = ExtResource( 10 )
+centered = false
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Five3" type="Sprite" parent="."]
+texture = ExtResource( 13 )
+centered = false
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Six3" type="Sprite" parent="."]
+texture = ExtResource( 17 )
+centered = false
+__meta__ = {
+"_edit_lock_": true
+}
