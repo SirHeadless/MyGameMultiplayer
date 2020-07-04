@@ -1,18 +1,18 @@
 [gd_scene load_steps=8 format=2]
 
-[ext_resource path="res://assets/fieldTileSet.tres" type="TileSet" id=1]
+[ext_resource path="res://board/Field/fieldTileSet.tres" type="TileSet" id=1]
 [ext_resource path="res://board/Board.cs" type="Script" id=2]
-[ext_resource path="res://assets/figureTileSet.tres" type="TileSet" id=3]
-[ext_resource path="res://field/FieldGreen.tscn" type="PackedScene" id=4]
-[ext_resource path="res://field/FieldYellow.tscn" type="PackedScene" id=5]
-[ext_resource path="res://valence/Valence.tres" type="TileSet" id=6]
+[ext_resource path="res://board/Status/statusTileSet.tres" type="TileSet" id=3]
+[ext_resource path="res://board/Field/FigurePlayer2.tscn" type="PackedScene" id=4]
+[ext_resource path="res://board/Field/FigurePlayer1.tscn" type="PackedScene" id=5]
+[ext_resource path="res://board/valence/Valence.tres" type="TileSet" id=6]
 
 [sub_resource type="CanvasItemMaterial" id=1]
 
 [node name="Board" type="Node2D"]
 script = ExtResource( 2 )
-FieldGreen = ExtResource( 4 )
-FieldYellow = ExtResource( 5 )
+FigurePlayer1 = ExtResource( 5 )
+FigurePlayer2 = ExtResource( 4 )
 
 [node name="Fields" type="TileMap" parent="."]
 process_priority = 5
@@ -26,7 +26,7 @@ __meta__ = {
 "_editor_description_": ""
 }
 
-[node name="Figures" type="TileMap" parent="."]
+[node name="Status" type="TileMap" parent="."]
 z_index = 1
 tile_set = ExtResource( 3 )
 cell_half_offset = 0

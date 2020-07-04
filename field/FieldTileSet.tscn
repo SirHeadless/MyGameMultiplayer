@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=2]
 
-[ext_resource path="res://assets/field.png" type="Texture" id=1]
+[ext_resource path="res://board/Field/assets/field.png" type="Texture" id=1]
 [ext_resource path="res://fonts/Permanent_Marker/PermanentMarker-Regular.ttf" type="DynamicFontData" id=2]
 
 [sub_resource type="DynamicFont" id=1]

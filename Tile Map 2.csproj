@@ -56,8 +56,8 @@
     <Compile Include="board\Board.cs" />
     <Compile Include="board\ClickedInput.cs" />
     <Compile Include="field\Field.cs" />
-    <Compile Include="field\FieldGreen.cs" />
-    <Compile Include="field\FieldYellow.cs" />
+    <Compile Include="board\Field\FigurePlayer1.cs" />
+    <Compile Include="board\Field\FigurePlayer2.cs"/>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="service\WebsocketService.cs" />
     <Compile Include="websocket\WsClient.cs" />

@@ -19,11 +19,6 @@ config/name="Tile Map 2"
 run/main_scene="res://board/Board.tscn"
 config/icon="res://icon.png"
 
-[display]
-
-window/size/width=650
-window/size/height=460
-
 [input]
 
 left_click={

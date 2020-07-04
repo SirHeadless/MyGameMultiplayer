@@ -6,8 +6,8 @@ using System.Collections.Generic;
 public class Board : Node2D
 {
 	public enum Player {
-		PlayerGreen=0,
-		PlayerYellow=1
+		Player1=0,
+		Player2=1
 
 	}
 
@@ -15,9 +15,9 @@ public class Board : Node2D
 	private static readonly int MAXCOLUMNS = 7;
 	
 	[Export]
-	public PackedScene FieldGreen;
+	public PackedScene FigurePlayer1;
 	[Export]
-	public PackedScene FieldYellow;
+	public PackedScene FigurePlayer2;
 
 	private string server;
 
@@ -170,9 +170,9 @@ public class Board : Node2D
 	public void displayCapturedFieldsOnField(String[] caputredFieldPositions, Player player)
 	{
 		GD.Print("ccccccccccccccc CAPTURED FIELDS ccccccccccccccccccccccc");
-		String tileName = (player == Player.PlayerGreen) ? "captured_gray" : "captured_gray";
-		int multiplicator = (player == Player.PlayerGreen) ? 1 : 2;
-		TileMap figuresTileMap = GetNode<TileMap>("Figures");
+		String tileName = "captured_gray";
+		int multiplicator = (player == Player.Player1) ? 1 : 2;
+		TileMap statusTileMap = GetNode<TileMap>("Status");
 		TileMap valenceTileMap = GetNode<TileMap>("Valence");
 		GD.Print(caputredFieldPositions);
 		for (int i = 2; i < caputredFieldPositions.Length; i=i+2) {
@@ -182,7 +182,7 @@ public class Board : Node2D
 			
 			int valenceTileIndex = this.valenceMatrix[y][x];
 			GD.Print(x,y,valenceTileIndex,tileName);
-			figuresTileMap.SetCellv(new Vector2(x, y), figuresTileMap.TileSet.FindTileByName(tileName));
+			statusTileMap.SetCellv(new Vector2(x, y), statusTileMap.TileSet.FindTileByName(tileName));
 			valenceTileMap.SetCellv(new Vector2(x, y), 6*multiplicator + valenceTileIndex-1);
 		}
 		GD.Print("cccccccccccccccccccccccccccccccccccccccccccccccccccccc");
@@ -191,16 +191,17 @@ public class Board : Node2D
 
 	public Area2D InstantiateFieldArea2D(Vector2 pos, Player player) {
 		switch(player) {
-			case Player.PlayerGreen:
-				GD.Print(FieldGreen._Bundled);
-				FieldGreen fieldGreen = (FieldGreen)FieldGreen.Instance();
-				fieldGreen.Init(pos);
-				return fieldGreen;
-			case Player.PlayerYellow: 		
-				GD.Print(FieldYellow._Bundled);
-				FieldYellow fieldYellow = (FieldYellow)FieldYellow.Instance();
-				fieldYellow.Init(pos);
-				return fieldYellow;
+			case Player.Player1:
+				GD.Print(FigurePlayer1._Bundled);
+				FigurePlayer1 figurePlayer1 = (FigurePlayer1)FigurePlayer1.Instance();
+				figurePlayer1.Init(pos);
+				return figurePlayer1;
+			case Player.Player2: 		
+				GD.Print(FigurePlayer2._Bundled);
+				FigurePlayer2 figurePlayer2 = (FigurePlayer2)FigurePlayer2.Instance();
+				figurePlayer2.Init(pos);
+				return figurePlayer2;
+
 		}
 
 		return null;

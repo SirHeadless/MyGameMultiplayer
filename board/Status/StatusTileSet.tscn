@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://board/Status/assets/Captured_gray.png" type="Texture" id=1]
+[ext_resource path="res://board/Status/assets/Captured_green.png" type="Texture" id=3]
+[ext_resource path="res://board/Status/assets/Captured_blue.png" type="Texture" id=4]
+
+[node name="FigureTileSet" type="Node2D"]
+
+[node name="captured_green" type="Sprite" parent="."]
+texture = ExtResource( 3 )
+
+[node name="captured_yellow" type="Sprite" parent="."]
+texture = ExtResource( 4 )
+
+[node name="captured_gray" type="Sprite" parent="."]
+texture = ExtResource( 1 )
